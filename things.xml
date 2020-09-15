@@ -2,7 +2,7 @@
 <!DOCTYPE Ontology [
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
 ]>
-<owlx:Ontology owlx:name="http://aidanparkinson.xyz/things"
+<owlx:Ontology owlx:name="http://things.aidanparkinson.xyz"
   xmlns:owlx="http://www.w3.org/2003/05/owl-xml">
 
   <owlx:Class owlx:name="MAC_address" owlx:complete="false">
