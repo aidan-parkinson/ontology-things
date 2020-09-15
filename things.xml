@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+]>
+<owlx:Ontology owlx:name="http://aidanparkinson.xyz/things"
+  xmlns:owlx="http://www.w3.org/2003/05/owl-xml">
+
+  <owlx:Class owlx:name="MAC_address" owlx:complete="false">
+
+    <owlx:Annotation>
+      <owlx:Label xml:lang="en">MACAddress</owlx:Label>
+      <owlx:Documentation xml:lang="en">media access control address</owlx:Documentation>
+    </owlx:Annotation>
+
+  </owlx:Class>
+
+
+  <owlx:Class owlx:name="NIC" owlx:complete="false">
+
+    <owlx:Annotation>
+      <owlx:Label xml:lang="en">NIC</owlx:Label>
+      <owlx:Documentation xml:lang="en">network interface controller</owlx:Documentation>
+    </owlx:Annotation>
+
+    <owlx:ObjectRestriction owlx:property="#hasValue">
+      <owlx:someValuesFrom owlx:class="#MAC_address" />
+    </owlx:ObjectRestriction>
+
+
+    </owlx:Class>
+
+</owlx:Ontology>
