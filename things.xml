@@ -286,5 +286,50 @@
 
     </owlx:Class>
 
+    <owlx:Class owlx:name="likert_scale" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Likert scale</owlx:Label>
+        <owlx:Documentation xml:lang="en">likert scale</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#someValuesFrom">
+        <owlx:Individual owlx:class="#likert_score" />
+        <owlx:Individual owlx:class="#likert_label" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="likert_score" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Likert score</owlx:Label>
+        <owlx:Documentation xml:lang="en">likert scale score</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="likert_label" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Likert label</owlx:Label>
+        <owlx:Documentation xml:lang="en">likert scale label</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:Individual owlx:class="#likert_score" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="description" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">description</owlx:Label>
+        <owlx:Documentation xml:lang="en">description</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
 
 </owlx:Ontology>
