@@ -39,6 +39,10 @@
       <owlx:Individual owlx:class="#MAC_address" />
     </owlx:ObjectRestriction>
 
+    <owlx:ObjectRestriction owlx:property="#oneOf">
+      <owlx:Individual owlx:class="#IEEE_802" />
+    </owlx:ObjectRestriction>
+
 
     </owlx:Class>
 
