@@ -370,14 +370,29 @@
 
     <owlx:Class owlx:name="message" owlx:complete="false">
 
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">message</owlx:Label>
+        <owlx:Documentation xml:lang="en">message</owlx:Documentation>
+      </owlx:Annotation>
+
       <owlx:ObjectRestriction owlx:property="#someValuesFrom">
         <owlx:Individual owlx:class="#likert_scale" />
         <owlx:Individual owlx:class="#description" />
+        <owlx:Individual owlx:class="#utc" />
       </owlx:ObjectRestriction>
 
       <owlx:ObjectRestriction owlx:property="#someValuesFrom">
         <owlx:Individual owlx:class="#network_packet" />
       </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="utc" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">UTC</owlx:Label>
+        <owlx:Documentation xml:lang="en">coordinated universal time</owlx:Documentation>
+      </owlx:Annotation>
 
     </owlx:Class>
 
