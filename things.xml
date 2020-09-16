@@ -44,7 +44,7 @@
     </owlx:ObjectRestriction>
 
     <owlx:ObjectRestriction owlx:property="#someValuesFrom">
-      <owlx:Individual owlx:class="#internet" />
+      <owlx:Individual owlx:class="#network_packet" />
     </owlx:ObjectRestriction>
 
 
