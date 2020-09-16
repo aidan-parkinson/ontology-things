@@ -17,7 +17,7 @@
   <owlx:Class owlx:name="MAC_address" owlx:complete="false">
 
     <owlx:Annotation>
-      <owlx:Label xml:lang="en">MAC_address</owlx:Label>
+      <owlx:Label xml:lang="en">MAC address</owlx:Label>
       <owlx:Documentation xml:lang="en">media access control address</owlx:Documentation>
     </owlx:Annotation>
 
