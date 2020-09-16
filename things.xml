@@ -104,6 +104,8 @@
 
       <owlx:ObjectRestriction owlx:property="#oneOf">
         <owlx:Individual owlx:class="#internet" />
+        <owlx:Individual owlx:class="#ssdp" />
+        <owlx:Individual owlx:class="#att" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -119,6 +121,32 @@
         <owlx:Individual owlx:class="#html" />
         <owlx:Individual owlx:class="#json" />
         <owlx:Individual owlx:class="#xml" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="ssdp" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">SSDP</owlx:Label>
+        <owlx:Documentation xml:lang="en">simple service discovery protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#udp" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="att" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">ATT</owlx:Label>
+        <owlx:Documentation xml:lang="en">low energy attribute protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#l2cap" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -171,6 +199,15 @@
       <owlx:Annotation>
         <owlx:Label xml:lang="en">UDP/IP</owlx:Label>
         <owlx:Documentation xml:lang="en">user datagram protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="l2cap" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">L2CAP</owlx:Label>
+        <owlx:Documentation xml:lang="en">logical link control and adaptation protocol</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
