@@ -22,7 +22,7 @@
     </owlx:Annotation>
 
     <owlx:ObjectRestriction owlx:property="#oneOf">
-      <owlx:someValuesFrom owlx:class="#manufacturer" />
+      <owlx:Individual owlx:class="#manufacturer" />
     </owlx:ObjectRestriction>
 
   </owlx:Class>
@@ -72,7 +72,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Wireless LAN</owlx:Label>
-        <owlx:Documentation xml:lang="en">wireless loval area network</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">wireless local area network</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
