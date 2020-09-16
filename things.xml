@@ -43,6 +43,10 @@
       <owlx:Individual owlx:class="#IEEE_802" />
     </owlx:ObjectRestriction>
 
+    <owlx:ObjectRestriction owlx:property="#someValuesFrom">
+      <owlx:Individual owlx:class="#internet" />
+    </owlx:ObjectRestriction>
+
 
     </owlx:Class>
 
@@ -89,5 +93,198 @@
       </owlx:Annotation>
 
     </owlx:Class>
+
+
+    <owlx:Class owlx:name="protocol" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Protocol</owlx:Label>
+        <owlx:Documentation xml:lang="en">protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:Individual owlx:class="#internet" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="language" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Language</owlx:Label>
+        <owlx:Documentation xml:lang="en">language</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:Individual owlx:class="#html" />
+        <owlx:Individual owlx:class="#json" />
+        <owlx:Individual owlx:class="#xml" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="internet" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Internet</owlx:Label>
+        <owlx:Documentation xml:lang="en">internet protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#tcp" />
+        <owlx:Individual owlx:class="#udp" />
+        <owlx:Individual owlx:class="#tlsp" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="tcp" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">TCP/IP</owlx:Label>
+        <owlx:Documentation xml:lang="en">transmission control protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#http" />
+        <owlx:Individual owlx:class="#mqtt" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="tlsp" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">TLS/IP</owlx:Label>
+        <owlx:Documentation xml:lang="en">transport layer security protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#https" />
+        <owlx:Individual owlx:class="#mqtts" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="udp" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">UDP/IP</owlx:Label>
+        <owlx:Documentation xml:lang="en">user datagram protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="mqtt" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">MQTT</owlx:Label>
+        <owlx:Documentation xml:lang="en">message queuing telemety transport</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="mqtts" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">MQTTS</owlx:Label>
+        <owlx:Documentation xml:lang="en">message queuing telemety transport (secure)</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="http" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">HTTP</owlx:Label>
+        <owlx:Documentation xml:lang="en">hypertext transfer protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="https" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">HTTPS</owlx:Label>
+        <owlx:Documentation xml:lang="en">hypertext transfer protocol (secure)</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="html" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">HTML</owlx:Label>
+        <owlx:Documentation xml:lang="en">hypertext markup language</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="json" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">JSON</owlx:Label>
+        <owlx:Documentation xml:lang="en">javascript object notation</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="xml" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">XML</owlx:Label>
+        <owlx:Documentation xml:lang="en">extensible markup language</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="network_packet" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Network packet</owlx:Label>
+        <owlx:Documentation xml:lang="en">network packet</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#someValuesFrom">
+        <owlx:Individual owlx:class="#MAC_address" />
+        <owlx:Individual owlx:class="#IP_address" />
+        <owlx:Individual owlx:class="#internet" />
+        <owlx:Individual owlx:class="#language" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IP_address" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">IP address</owlx:Label>
+        <owlx:Documentation xml:lang="en">internet protocol address</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:Individual owlx:class="#IPv4" />
+        <owlx:Individual owlx:class="#IPv6" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IPv4" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">IPv4 address</owlx:Label>
+        <owlx:Documentation xml:lang="en">internet protocol address version 4</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IPv6" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">IPv6 address</owlx:Label>
+        <owlx:Documentation xml:lang="en">internet protocol address version 6</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
 
 </owlx:Ontology>
