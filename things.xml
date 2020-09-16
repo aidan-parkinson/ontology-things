@@ -5,12 +5,25 @@
 <owlx:Ontology owlx:name="http://things.aidanparkinson.xyz"
   xmlns:owlx="http://www.w3.org/2003/05/owl-xml">
 
+  <owlx:Class owlx:name="manufacturer" owlx:complete="false">
+
+    <owlx:Annotation>
+      <owlx:Label xml:lang="en">manufacturer</owlx:Label>
+      <owlx:Documentation xml:lang="en">manufacturer</owlx:Documentation>
+    </owlx:Annotation>
+
+  </owlx:Class>
+
   <owlx:Class owlx:name="MAC_address" owlx:complete="false">
 
     <owlx:Annotation>
       <owlx:Label xml:lang="en">MAC_address</owlx:Label>
       <owlx:Documentation xml:lang="en">media access control address</owlx:Documentation>
     </owlx:Annotation>
+
+    <owlx:ObjectRestriction owlx:property="#oneOf">
+      <owlx:someValuesFrom owlx:class="#manufacturer" />
+    </owlx:ObjectRestriction>
 
   </owlx:Class>
 
@@ -22,10 +35,54 @@
       <owlx:Documentation xml:lang="en">network interface controller</owlx:Documentation>
     </owlx:Annotation>
 
-    <owlx:ObjectRestriction owlx:property="#hasValue">
-      <owlx:someValuesFrom owlx:class="#MAC_address" />
+    <owlx:ObjectRestriction owlx:property="#oneOf">
+      <owlx:Individual owlx:class="#MAC_address" />
     </owlx:ObjectRestriction>
 
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IEEE_802" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">IEEE 802</owlx:Label>
+        <owlx:Documentation xml:lang="en">IEEE 802</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:OneOf>
+          <owlx:Individual owlx:name="#IEEE 802.15.1" />
+          <owlx:Individual owlx:name="#IEEE 802.11" />
+          <owlx:Individual owlx:name="#IEEE 802.3" />
+        </owlx:OneOf>
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IEEE 802.15.1" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Bluetooth</owlx:Label>
+        <owlx:Documentation xml:lang="en">bluetooth</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IEEE 802.11" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Wireless LAN</owlx:Label>
+        <owlx:Documentation xml:lang="en">wireless loval area network</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="IEEE 802.3" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Ethernet</owlx:Label>
+        <owlx:Documentation xml:lang="en">ethernet</owlx:Documentation>
+      </owlx:Annotation>
 
     </owlx:Class>
 
