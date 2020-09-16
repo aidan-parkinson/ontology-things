@@ -285,7 +285,7 @@
       <owlx:ObjectRestriction owlx:property="#someValuesFrom">
         <owlx:Individual owlx:class="#MAC_address" />
         <owlx:Individual owlx:class="#IP_address" />
-        <owlx:Individual owlx:class="#internet" />
+        <owlx:Individual owlx:class="#protocol" />
         <owlx:Individual owlx:class="#language" />
       </owlx:ObjectRestriction>
 
