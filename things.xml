@@ -5,11 +5,11 @@
 <owlx:Ontology owlx:name="http://things.aidanparkinson.xyz"
   xmlns:owlx="http://www.w3.org/2003/05/owl-xml">
 
-  <owlx:Class owlx:name="manufacturer" owlx:complete="false">
+  <owlx:Class owlx:name="organisation" owlx:complete="false">
 
     <owlx:Annotation>
-      <owlx:Label xml:lang="en">manufacturer</owlx:Label>
-      <owlx:Documentation xml:lang="en">manufacturer</owlx:Documentation>
+      <owlx:Label xml:lang="en">Organisation</owlx:Label>
+      <owlx:Documentation xml:lang="en">organisation</owlx:Documentation>
     </owlx:Annotation>
 
   </owlx:Class>
@@ -22,7 +22,7 @@
     </owlx:Annotation>
 
     <owlx:ObjectRestriction owlx:property="#oneOf">
-      <owlx:Individual owlx:class="#manufacturer" />
+      <owlx:Individual owlx:class="#organisation" />
     </owlx:ObjectRestriction>
 
   </owlx:Class>
