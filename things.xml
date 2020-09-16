@@ -201,6 +201,10 @@
         <owlx:Documentation xml:lang="en">user datagram protocol</owlx:Documentation>
       </owlx:Annotation>
 
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#ntp" />
+      </owlx:ObjectRestriction>
+
     </owlx:Class>
 
     <owlx:Class owlx:name="l2cap" owlx:complete="false">
@@ -395,6 +399,17 @@
       </owlx:Annotation>
 
     </owlx:Class>
+
+  </owlx:Class>
+
+  <owlx:Class owlx:name="ntp" owlx:complete="false">
+
+    <owlx:Annotation>
+      <owlx:Label xml:lang="en">NTP</owlx:Label>
+      <owlx:Documentation xml:lang="en">network time protocol</owlx:Documentation>
+    </owlx:Annotation>
+
+  </owlx:Class>
 
 
 </owlx:Ontology>
