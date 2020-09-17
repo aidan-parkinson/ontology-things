@@ -5,12 +5,25 @@
 <owlx:Ontology owlx:name="http://things.aidanparkinson.xyz"
   xmlns:owlx="http://www.w3.org/2003/05/owl-xml">
 
+  <owlx:Class owlx:name="oui" owlx:complete="false">
+
+    <owlx:Annotation>
+      <owlx:Label xml:lang="en">Organisationally unique identifier</owlx:Label>
+      <owlx:Documentation xml:lang="en">organisationally unique identifier</owlx:Documentation>
+    </owlx:Annotation>
+
+  </owlx:Class>
+
   <owlx:Class owlx:name="organisation" owlx:complete="false">
 
     <owlx:Annotation>
       <owlx:Label xml:lang="en">Organisation</owlx:Label>
       <owlx:Documentation xml:lang="en">organisation</owlx:Documentation>
     </owlx:Annotation>
+
+    <owlx:ObjectRestriction owlx:property="#someValuesFrom">
+      <owlx:Individual owlx:class="#oui" />
+    </owlx:ObjectRestriction>
 
   </owlx:Class>
 
