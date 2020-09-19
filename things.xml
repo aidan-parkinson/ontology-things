@@ -27,7 +27,7 @@
 
   </owlx:Class>
 
-  <owlx:Class owlx:name="MAC_address" owlx:complete="false">
+  <owlx:Class owlx:name="mac_address" owlx:complete="false">
 
     <owlx:Annotation>
       <owlx:Label xml:lang="en">MAC address</owlx:Label>
@@ -49,11 +49,11 @@
     </owlx:Annotation>
 
     <owlx:ObjectRestriction owlx:property="#oneOf">
-      <owlx:Individual owlx:class="#MAC_address" />
+      <owlx:Individual owlx:class="#mac_address" />
     </owlx:ObjectRestriction>
 
     <owlx:ObjectRestriction owlx:property="#oneOf">
-      <owlx:Individual owlx:class="#IEEE_802" />
+      <owlx:Individual owlx:class="#ieee_802" />
     </owlx:ObjectRestriction>
 
     <owlx:ObjectRestriction owlx:property="#someValuesFrom">
@@ -63,7 +63,7 @@
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IEEE_802" owlx:complete="false">
+    <owlx:Class owlx:name="ieee_802" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">IEEE 802</owlx:Label>
@@ -72,15 +72,15 @@
 
       <owlx:ObjectRestriction owlx:property="#oneOf">
         <owlx:OneOf>
-          <owlx:Individual owlx:name="#IEEE 802.15.1" />
-          <owlx:Individual owlx:name="#IEEE 802.11" />
-          <owlx:Individual owlx:name="#IEEE 802.3" />
+          <owlx:Individual owlx:name="#ieee_802.15.1" />
+          <owlx:Individual owlx:name="#ieee_802.11" />
+          <owlx:Individual owlx:name="#ieee_802.3" />
         </owlx:OneOf>
       </owlx:ObjectRestriction>
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IEEE 802.15.1" owlx:complete="false">
+    <owlx:Class owlx:name="ieee_802.15.1" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Bluetooth</owlx:Label>
@@ -89,7 +89,7 @@
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IEEE 802.11" owlx:complete="false">
+    <owlx:Class owlx:name="ieee_802.11" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Wireless LAN</owlx:Label>
@@ -98,7 +98,7 @@
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IEEE 802.3" owlx:complete="false">
+    <owlx:Class owlx:name="ieee_802.3" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Ethernet</owlx:Label>
@@ -118,7 +118,7 @@
       <owlx:ObjectRestriction owlx:property="#oneOf">
         <owlx:Individual owlx:class="#internet" />
         <owlx:Individual owlx:class="#ssdp" />
-        <owlx:Individual owlx:class="#att" />
+        <owlx:Individual owlx:class="#l2cap" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -158,9 +158,18 @@
         <owlx:Documentation xml:lang="en">low energy attribute protocol</owlx:Documentation>
       </owlx:Annotation>
 
-      <owlx:ObjectRestriction owlx:property="#hasValue">
-        <owlx:Individual owlx:class="#l2cap" />
+      <owlx:ObjectRestriction owlx:property="#someValuesFrom">
+        <owlx:Individual owlx:class="#gatt" />
       </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="gatt" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">GATT</owlx:Label>
+        <owlx:Documentation xml:lang="en">generic access profile</owlx:Documentation>
+      </owlx:Annotation>
 
     </owlx:Class>
 
@@ -227,6 +236,10 @@
         <owlx:Documentation xml:lang="en">logical link control and adaptation protocol</owlx:Documentation>
       </owlx:Annotation>
 
+      <owlx:ObjectRestriction owlx:property="#hasValue">
+        <owlx:Individual owlx:class="#att" />
+      </owlx:ObjectRestriction>
+
     </owlx:Class>
 
     <owlx:Class owlx:name="mqtt" owlx:complete="false">
@@ -292,6 +305,78 @@
 
     </owlx:Class>
 
+    <owlx:Class owlx:name="ble_frame_type" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">BLE frame type</owlx:Label>
+        <owlx:Documentation xml:lang="en">bluetooth low energy frame type</owlx:Documentation>
+      </owlx:Annotation>
+
+      <owlx:ObjectRestriction owlx:property="#oneOf">
+        <owlx:Individual owlx:class="#ibeacon" />
+        <owlx:Individual owlx:class="#eddystone-uid" />
+        <owlx:Individual owlx:class="#eddystone-eid" />
+        <owlx:Individual owlx:class="#eddystone-tlm" />
+        <owlx:Individual owlx:class="#eddystone-url" />
+        <owlx:Individual owlx:class="#kontakt-tlm" />
+      </owlx:ObjectRestriction>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="ibeacon" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">iBeacon</owlx:Label>
+        <owlx:Documentation xml:lang="en">iBeacon</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="eddystone-uid" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Eddystone-UID</owlx:Label>
+        <owlx:Documentation xml:lang="en">Eddystone-UID</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="eddystone-eid" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Eddystone-EID</owlx:Label>
+        <owlx:Documentation xml:lang="en">Eddystone-EID</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="eddystone-tlm" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Eddystone-TLM</owlx:Label>
+        <owlx:Documentation xml:lang="en">Eddystone-TLM</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="kontakt-tlm" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Kontakt-TLM</owlx:Label>
+        <owlx:Documentation xml:lang="en">Kontakt-TLM</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
+    <owlx:Class owlx:name="eddystone-url" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Eddystone-URL</owlx:Label>
+        <owlx:Documentation xml:lang="en">Eddystone-URL</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+
     <owlx:Class owlx:name="network_packet" owlx:complete="false">
 
       <owlx:Annotation>
@@ -300,15 +385,16 @@
       </owlx:Annotation>
 
       <owlx:ObjectRestriction owlx:property="#someValuesFrom">
-        <owlx:Individual owlx:class="#MAC_address" />
-        <owlx:Individual owlx:class="#IP_address" />
+        <owlx:Individual owlx:class="#mac_address" />
+        <owlx:Individual owlx:class="#ip_address" />
         <owlx:Individual owlx:class="#protocol" />
         <owlx:Individual owlx:class="#language" />
+        <owlx:Individual owlx:class="#ble_frame_type" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IP_address" owlx:complete="false">
+    <owlx:Class owlx:name="ip_address" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">IP address</owlx:Label>
@@ -316,13 +402,13 @@
       </owlx:Annotation>
 
       <owlx:ObjectRestriction owlx:property="#oneOf">
-        <owlx:Individual owlx:class="#IPv4" />
-        <owlx:Individual owlx:class="#IPv6" />
+        <owlx:Individual owlx:class="#ipv4" />
+        <owlx:Individual owlx:class="#ipv6" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IPv4" owlx:complete="false">
+    <owlx:Class owlx:name="ipv4" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">IPv4 address</owlx:Label>
@@ -331,7 +417,7 @@
 
     </owlx:Class>
 
-    <owlx:Class owlx:name="IPv6" owlx:complete="false">
+    <owlx:Class owlx:name="ipv6" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">IPv6 address</owlx:Label>
