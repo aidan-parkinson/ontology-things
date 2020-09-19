@@ -327,7 +327,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">iBeacon</owlx:Label>
-        <owlx:Documentation xml:lang="en">iBeacon</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">ibeacon</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
@@ -336,7 +336,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Eddystone-UID</owlx:Label>
-        <owlx:Documentation xml:lang="en">Eddystone-UID</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">eddystone unique identifier</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
@@ -345,7 +345,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Eddystone-EID</owlx:Label>
-        <owlx:Documentation xml:lang="en">Eddystone-EID</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">eddystone encrypted unique identifier</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
@@ -354,7 +354,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Eddystone-TLM</owlx:Label>
-        <owlx:Documentation xml:lang="en">Eddystone-TLM</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">eddystone telemety message</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
@@ -363,7 +363,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">Kontakt-TLM</owlx:Label>
-        <owlx:Documentation xml:lang="en">Kontakt-TLM</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">kontakt telemetry message</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
