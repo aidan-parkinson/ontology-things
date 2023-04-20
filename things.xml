@@ -275,7 +275,7 @@
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">OPC UA</owlx:Label>
-        <owlx:Documentation xml:lang="en">open protocol communications unified architecturel</owlx:Documentation>
+        <owlx:Documentation xml:lang="en">open protocol communications unified architecture</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
