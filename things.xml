@@ -134,6 +134,7 @@
         <owlx:Individual owlx:class="#html" />
         <owlx:Individual owlx:class="#json" />
         <owlx:Individual owlx:class="#xml" />
+        <owlx:Individual owlx:class="#opc" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -321,6 +322,15 @@
       <owlx:Annotation>
         <owlx:Label xml:lang="en">XML</owlx:Label>
         <owlx:Documentation xml:lang="en">extensible markup language</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="opc" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">OPC Binary</owlx:Label>
+        <owlx:Documentation xml:lang="en">open platform communications binary</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
