@@ -117,7 +117,6 @@
 
       <owlx:ObjectRestriction owlx:property="#oneOf">
         <owlx:Individual owlx:class="#internet" />
-        <owlx:Individual owlx:class="#ssdp" />
         <owlx:Individual owlx:class="#l2cap" />
       </owlx:ObjectRestriction>
 
@@ -134,7 +133,7 @@
         <owlx:Individual owlx:class="#html" />
         <owlx:Individual owlx:class="#json" />
         <owlx:Individual owlx:class="#xml" />
-        <owlx:Individual owlx:class="#opc" />
+        <owlx:Individual owlx:class="#opc_binary" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -145,10 +144,6 @@
         <owlx:Label xml:lang="en">SSDP</owlx:Label>
         <owlx:Documentation xml:lang="en">simple service discovery protocol</owlx:Documentation>
       </owlx:Annotation>
-
-      <owlx:ObjectRestriction owlx:property="#hasValue">
-        <owlx:Individual owlx:class="#udp" />
-      </owlx:ObjectRestriction>
 
     </owlx:Class>
 
@@ -200,7 +195,7 @@
         <owlx:Individual owlx:class="#http" />
         <owlx:Individual owlx:class="#mqtt" />
         <owlx:Individual owlx:class="#dcom" />
-        <owlx:Individual owlx:class="#opcua" />
+        <owlx:Individual owlx:class="#opc_ua" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -228,6 +223,10 @@
 
       <owlx:ObjectRestriction owlx:property="#hasValue">
         <owlx:Individual owlx:class="#ntp" />
+        <owlx:Individual owlx:class="#ssdp" />
+        <owlx:Individual owlx:class="#bacnet" />
+        <owlx:Individual owlx:class="#modbus" />
+        <owlx:Individual owlx:class="#knx" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -272,7 +271,7 @@
 
     </owlx:Class>
     
-    <owlx:Class owlx:name="opcua" owlx:complete="false">
+    <owlx:Class owlx:name="opc_ua" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">OPC UA</owlx:Label>
@@ -295,6 +294,33 @@
       <owlx:Annotation>
         <owlx:Label xml:lang="en">HTTPS</owlx:Label>
         <owlx:Documentation xml:lang="en">hypertext transfer protocol (secure)</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="bacnet" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">BACnet</owlx:Label>
+        <owlx:Documentation xml:lang="en">building automation control networks</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="modbus" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">Modbus</owlx:Label>
+        <owlx:Documentation xml:lang="en">Modicon data communications protocol</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="knx" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">KNX</owlx:Label>
+        <owlx:Documentation xml:lang="en">KNX networks communications protocol</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
@@ -326,7 +352,7 @@
 
     </owlx:Class>
     
-    <owlx:Class owlx:name="opc" owlx:complete="false">
+    <owlx:Class owlx:name="opc_binary" owlx:complete="false">
 
       <owlx:Annotation>
         <owlx:Label xml:lang="en">OPC Binary</owlx:Label>
