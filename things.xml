@@ -198,6 +198,8 @@
       <owlx:ObjectRestriction owlx:property="#hasValue">
         <owlx:Individual owlx:class="#http" />
         <owlx:Individual owlx:class="#mqtt" />
+        <owlx:Individual owlx:class="#dcom" />
+        <owlx:Individual owlx:class="#opcua" />
       </owlx:ObjectRestriction>
 
     </owlx:Class>
@@ -256,6 +258,24 @@
       <owlx:Annotation>
         <owlx:Label xml:lang="en">MQTTS</owlx:Label>
         <owlx:Documentation xml:lang="en">message queuing telemety transport (secure)</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="dcom" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">DCOM</owlx:Label>
+        <owlx:Documentation xml:lang="en">distributed component object model</owlx:Documentation>
+      </owlx:Annotation>
+
+    </owlx:Class>
+    
+    <owlx:Class owlx:name="opcua" owlx:complete="false">
+
+      <owlx:Annotation>
+        <owlx:Label xml:lang="en">OPC UA</owlx:Label>
+        <owlx:Documentation xml:lang="en">open protocol communications unified architecturel</owlx:Documentation>
       </owlx:Annotation>
 
     </owlx:Class>
